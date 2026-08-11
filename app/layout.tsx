@@ -24,23 +24,23 @@ const plexMono = IBM_Plex_Mono({
 
 const siteUrl = "https://akhilvij.com";
 const description =
-  "Staff full-stack engineer & co-founder in Delhi NCR. Shipping AI-heavy web products across fintech, healthcare, and developer education — owning the whole stack, from the data model to the interface.";
+  "Staff full-stack engineer & founder in Delhi NCR. Shipping AI-heavy web products across fintech, healthcare, and developer education — owning the whole stack, from the data model to the interface.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Akhil Vij — Staff Engineer & Co-founder",
+  title: "Akhil Vij — Staff Engineer & Founder",
   description,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "Akhil Vij",
-    title: "Akhil Vij — Staff Engineer & Co-founder",
+    title: "Akhil Vij — Staff Engineer & Founder",
     description,
   },
   twitter: {
     card: "summary",
-    title: "Akhil Vij — Staff Engineer & Co-founder",
+    title: "Akhil Vij — Staff Engineer & Founder",
     description,
   },
 };

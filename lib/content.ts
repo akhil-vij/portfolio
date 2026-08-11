@@ -48,7 +48,7 @@ export const resumeHref = "/Akhil-Vij-Resume.pdf";
 export const socials: Social[] = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/akhil-vij-50b68085/",
+    href: "https://www.linkedin.com/in/akhil-vij",
     handle: "in/akhil-vij",
   },
   { label: "GitHub", href: "https://github.com/akhil-vij", handle: "akhil-vij" },
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     signature:
       "Every scored number traces to a verbatim quote in a dated, content-addressed snapshot.",
     stack: ["Next.js", "TypeScript", "Zod", "Python", "LLM extraction", "Postgres"],
-    role: "Co-founder · lead engineer",
+    role: "Founder · lead engineer",
     focus: ["Scoring engine", "Extraction pipeline", "Bitemporal data model"],
   },
   {
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     statusLabel: "In pilot",
     tone: "var(--st-pilot)",
     tagline: "Practice management for small Indian dental clinics",
-    desc: "A patient-ledger SaaS built on a sharp wedge: AI reads a clinic’s existing handwritten registers and slips, so they get a digital record with zero data migration. Competitors added AI to help humans do data entry faster — ClinicKhata removes the data entry. Currently in pilot with a West Delhi clinic.",
+    desc: "A patient-ledger SaaS built on a sharp wedge: AI reads a clinic’s existing handwritten registers and slips, so they get a digital record with zero data migration. Competitors added AI to help humans do data entry faster — ClinicKhata removes the data entry. Currently in pilot with two clinics and open for public signup.",
     signature:
       "The onboarding cost that kills most clinic software is the one thing designed away.",
     stack: [
@@ -132,7 +132,7 @@ export const experience: Experience[] = [
     metrics: [
       { v: "45", l: "production components" },
       { v: "25+", l: "SaaS products" },
-      { v: "1→6", l: "team grown & led" },
+      { v: "1→5", l: "engineers grown & led" },
     ],
     points: [
       "Founding engineer of Droplets, Informatica’s company-wide React + TypeScript design system; grew the India team from one (me) to five engineers and a manager.",

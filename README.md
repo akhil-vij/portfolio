@@ -1,6 +1,6 @@
 # akhilvij.com
 
-Personal portfolio site for **Akhil Vij** — staff full-stack engineer & co-founder (Delhi NCR). A static single-page site presenting three founder products (MatchMyCard, ClinicKhata, BehindScale) alongside a full work history (Agoda, Informatica).
+Personal portfolio site for **Akhil Vij** — staff full-stack engineer & founder (Delhi NCR). A static single-page site presenting three founder products (MatchMyCard, ClinicKhata, BehindScale) alongside a full work history (Agoda, Informatica).
 
 Its through-line is **provenance / bitemporality** — "systems that stay honest" — expressed in a bitemporal career timeline in the hero and source-record styling throughout (mono labels, status dots, "signature" callouts).
 

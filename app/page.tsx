@@ -138,7 +138,7 @@ export default function Page() {
               className="akv-sub"
               style={{ fontFamily: MONO, fontSize: 11, color: "var(--muted)" }}
             >
-              staff engineer · co-founder
+              staff engineer · founder
             </span>
           </a>
           <div
@@ -220,7 +220,7 @@ export default function Page() {
                   marginBottom: 22,
                 }}
               >
-                STAFF ENGINEER &amp; CO-FOUNDER — DELHI NCR
+                STAFF ENGINEER &amp; FOUNDER — DELHI NCR
               </div>
               <h1
                 style={{
@@ -661,7 +661,7 @@ export default function Page() {
               {
                 letter: "B",
                 title: "AI as infrastructure",
-                body: "LLM extraction pipelines with validation gates that turn messy documents — bank PDFs, handwritten registers — into structured, trustworthy data. It's the wedge behind two products, not a party trick.",
+                body: "LLM extraction pipelines with validation gates that turn messy documents — bank PDFs, handwritten registers — into structured, trustworthy data. It's the wedge behind two products, not a demo.",
               },
               {
                 letter: "C",
