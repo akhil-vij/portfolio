@@ -48,7 +48,7 @@ export const resumeHref = "/Akhil-Vij-Resume.pdf";
 export const socials: Social[] = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/akhil-vij",
+    href: "https://www.linkedin.com/in/akhil-vij-50b68085",
     handle: "in/akhil-vij",
   },
   { label: "GitHub", href: "https://github.com/akhil-vij", handle: "akhil-vij" },
@@ -66,9 +66,21 @@ export const projects: Project[] = [
     desc: "Ranks UAE credit cards by real net value — in dirhams, for your actual spending — through a gamified quiz that profiles how you spend, surfaces a “Money Personality,” and shares bank commission back with users. Under the hood it is two systems: an AI pipeline that turns bank product pages and Schedule-of-Charges PDFs into structured card data, and a scoring engine that computes each card’s net annual value against your habits.",
     signature:
       "Every scored number traces to a verbatim quote in a dated, content-addressed snapshot.",
-    stack: ["Next.js", "TypeScript", "Zod", "Python", "LLM extraction", "Postgres"],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "LLM extraction",
+      "AI workflows",
+      "Agent orchestration",
+      "AI harness",
+    ],
     role: "Founder · lead engineer",
-    focus: ["Scoring engine", "Extraction pipeline", "Bitemporal data model"],
+    focus: [
+      "AI extraction pipeline",
+      "Net-value scoring engine",
+      "Bitemporal snapshots",
+    ],
   },
   {
     n: "02",
@@ -78,19 +90,23 @@ export const projects: Project[] = [
     statusLabel: "In pilot",
     tone: "var(--st-pilot)",
     tagline: "Practice management for small Indian dental clinics",
-    desc: "A patient-ledger SaaS built on a sharp wedge: AI reads a clinic’s existing handwritten registers and slips, so they get a digital record with zero data migration. Competitors added AI to help humans do data entry faster — ClinicKhata removes the data entry. Currently in pilot with two clinics and open for public signup.",
+    desc: "A patient-ledger SaaS whose wedge is extraction, not data entry: AI reads a clinic’s existing handwritten registers and slips, so a clinic goes digital with zero migration. A feedback loop sharpens it over time — the AI mis-reads a slip, the dentist corrects it, and extraction accuracy climbs for that clinic with every correction. Patient data stays resident in India, built to comply with the DPDPA. In pilot with two clinics and open for public signup.",
     signature:
-      "The onboarding cost that kills most clinic software is the one thing designed away.",
+      "Every correction a dentist makes trains the model for that clinic — accuracy compounds instead of plateauing.",
     stack: [
       "Next.js",
       "TypeScript",
-      "Tailwind",
       "Supabase",
-      "Anthropic API",
-      "WhatsApp API",
+      "LLM extraction",
+      "Handwriting OCR",
+      "Feedback loop",
     ],
     role: "Founder · engineer",
-    focus: ["Extraction wedge", "Zero-migration onboarding", "Patient ledger"],
+    focus: [
+      "Handwriting feedback loop",
+      "Zero-migration onboarding",
+      "India residency · DPDPA",
+    ],
   },
   {
     n: "03",
@@ -100,11 +116,21 @@ export const projects: Project[] = [
     statusLabel: "Live",
     tone: "var(--st-live)",
     tagline: "System-design learning for staff-level engineers",
-    desc: "Deeply-researched case studies of real architectures and production outages, each paired with an interactive simulation you can actually poke — set the fault, watch the failure mode, then see the fix. Built to teach the judgment behind staff-level system design, not just the vocabulary.",
+    desc: "A system-design learning tool for senior and staff engineers, built from real production engineering write-ups — not the usual “design WhatsApp” exercises. Every case pairs a plain-language breakdown with an interactive artifact you can poke and break to feel the real trade-offs behind the architecture. Authoring runs on a coordinated fleet of agents — researching, drafting, building the artifact, reviewing, and making share images — that I direct end to end.",
     signature: "Every case ships with a runnable model of its own failure.",
-    stack: ["React", "Interactive simulations", "JSON-driven content"],
+    stack: [
+      "Next.js",
+      "React",
+      "Interactive simulations",
+      "Multi-agent authoring",
+      "Agent orchestration",
+    ],
     role: "Author · engineer",
-    focus: ["Case-study research", "Runnable failure models", "Editorial"],
+    focus: [
+      "Real-world case research",
+      "Interactive failure artifacts",
+      "Plain-language editorial",
+    ],
   },
 ];
 

@@ -656,17 +656,17 @@ export default function Page() {
               {
                 letter: "A",
                 title: "Systems that stay honest",
-                body: "Bitemporal data models and source-traceable pipelines where every number traces back to a dated, verbatim source. Correctness isn't bolted on — it's the architecture.",
+                body: "MatchMyCard runs a monthly pipeline that scrapes UAE bank sites and pulls every cashback rate, offer, and benefit into structured data — each figure traceable to the bank's own page. Cards get quietly devalued and no one re-reads the fine print; this keeps what users see accurate and provable.",
               },
               {
                 letter: "B",
                 title: "AI as infrastructure",
-                body: "LLM extraction pipelines with validation gates that turn messy documents — bank PDFs, handwritten registers — into structured, trustworthy data. It's the wedge behind two products, not a demo.",
+                body: "LLM extraction turns messy inputs — bank PDFs, handwritten dental slips — into structured data behind validation gates. At ClinicKhata a correction loop learns each clinic's handwriting, so extraction gets more accurate the more it's used.",
               },
               {
                 letter: "C",
-                title: "One engineer, three products",
-                body: "I architect and review while directing AI coding agents on implementation — a loop that runs several products at once without loosening rigor where it counts.",
+                title: "One engineer, a fleet of agents",
+                body: "I architect and review, then direct AI agents on the work — coding agents on implementation, and at BehindScale a fleet that researches, drafts, and reviews. The job is the guardrails and checks that keep them on-goal and off slop, so one engineer can run several products at once.",
               },
             ].map((card) => (
               <div
@@ -1378,6 +1378,35 @@ export default function Page() {
                     }}
                   >
                     Download résumé &#8595;
+                  </a>
+                </div>
+                <div
+                  style={{
+                    marginTop: 18,
+                    display: "flex",
+                    alignItems: "baseline",
+                    gap: 8,
+                    flexWrap: "wrap",
+                    fontFamily: MONO,
+                    fontSize: 13,
+                    color: "var(--ink2)",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: 10.5,
+                      letterSpacing: ".12em",
+                      color: "var(--muted)",
+                    }}
+                  >
+                    PHONE
+                  </span>
+                  <a
+                    href="tel:+919912752587"
+                    className="akv-link"
+                    style={{ color: "var(--ink2)", textDecoration: "none" }}
+                  >
+                    +91-9912752587
                   </a>
                 </div>
               </div>

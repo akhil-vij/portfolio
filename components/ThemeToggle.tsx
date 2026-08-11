@@ -11,7 +11,7 @@ import type { Theme } from "@/lib/content";
  * its own label ("dark"/"light") in sync.
  */
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     const current = document.documentElement.getAttribute("data-theme");

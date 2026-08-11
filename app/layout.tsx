@@ -48,11 +48,11 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1e1620",
+  themeColor: "#eceef4",
 };
 
 // Runs before first paint: applies the saved theme so there's no flash
-// of the wrong palette. Dark is the default (set statically on <html>).
+// of the wrong palette. Light is the default (set statically on <html>).
 const themeScript = `(function(){try{var t=localStorage.getItem('akv-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();`;
 
 export default function RootLayout({
@@ -63,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-theme="dark"
+      data-theme="light"
       className={`${newsreader.variable} ${archivo.variable} ${plexMono.variable}`}
       suppressHydrationWarning
     >
