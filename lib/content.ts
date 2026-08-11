@@ -172,18 +172,35 @@ export const experience: Experience[] = [
 export const stackGroups: StackGroup[] = [
   {
     group: "Frontend",
-    items: ["React", "Next.js (App Router)", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+    items: [
+      "React",
+      "TypeScript",
+      "CSS",
+      "Design systems",
+      "A11y",
+      "Next.js",
+      "Frontend architecture",
+      "REST",
+      "GraphQL",
+    ],
   },
   {
     group: "Backend & Data",
-    items: ["Node.js", "Python", "PostgreSQL / Supabase", "Zod", "Bitemporal modeling"],
+    items: ["Node.js", "Python", "Scala", "Postgres", "Kafka"],
   },
   {
     group: "AI & LLM systems",
-    items: ["Anthropic API", "LLM extraction", "Prompt engineering", "Agent orchestration"],
+    items: [
+      "Claude Code",
+      "Open-source models",
+      "Context engineering",
+      "Agent orchestration",
+      "AI harness",
+      "AI workflows",
+    ],
   },
   {
     group: "Infra & tooling",
-    items: ["Vercel", "Git", "WhatsApp Business API", "Exotel"],
+    items: ["Git", "Grafana", "GitHub Actions", "CI/CD"],
   },
 ];
