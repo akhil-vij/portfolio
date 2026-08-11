@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens — the whole site is painted from these.
+   Dark ("Bitemporal") is the default; light ("Provenance")
+   swaps the set via [data-theme="light"] on <html>.
+   ============================================================ */
+:root {
+  --bg: #1e1620;
+  --panel: #271a25;
+  --raised: #31222d;
+  --ink: #f4ece3;
+  --ink2: #c9bac0;
+  --muted: #9a8992;
+  --line: rgba(244, 236, 227, 0.13);
+  --line2: rgba(244, 236, 227, 0.07);
+  --accent: #e8a33d;
+  --accent2: #f4bd6a;
+  --on-accent: #1e1620;
+  --st-live: #79c39b;
+  --st-build: #e8a33d;
+  --st-pilot: #6fb2d6;
+  --bar-bg: rgba(244, 236, 227, 0.14);
+  --acc-soft: rgba(232, 163, 61, 0.26);
+  --acc-soft-line: rgba(232, 163, 61, 0.5);
+  --nav-bg: rgba(30, 22, 32, 0.82);
+  --dots: rgba(244, 236, 227, 0.055);
+  --rail: rgba(232, 163, 61, 0.05);
+
+  /* Font stacks bound to next/font CSS variables (set on <html>). */
+  --ff-serif: var(--font-newsreader), Georgia, serif;
+  --ff-sans: var(--font-archivo), system-ui, sans-serif;
+  --ff-mono: var(--font-mono), ui-monospace, "IBM Plex Mono", monospace;
+}
+
+:root[data-theme="light"] {
+  --bg: #eceef4;
+  --panel: #ffffff;
+  --raised: #eceef4;
+  --ink: #161a23;
+  --ink2: #3d4453;
+  --muted: #767d8d;
+  --line: #d6dae3;
+  --line2: #e4e7ee;
+  --accent: #2b46d4;
+  --accent2: #1f34a6;
+  --on-accent: #ffffff;
+  --st-live: #17915a;
+  --st-build: #a6790c;
+  --st-pilot: #2b46d4;
+  --bar-bg: rgba(22, 26, 35, 0.1);
+  --acc-soft: rgba(43, 70, 212, 0.14);
+  --acc-soft-line: rgba(43, 70, 212, 0.45);
+  --nav-bg: rgba(236, 238, 244, 0.86);
+  --dots: rgba(43, 70, 212, 0.1);
+  --rail: rgba(43, 70, 212, 0.03);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--ff-sans);
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   Entry animation (hero only) + reduced-motion opt-out
+   ============================================================ */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============================================================
+   Section scroll offset (sticky nav). Wrapped nav is taller
+   on small screens, so the offset grows there.
+   ============================================================ */
+.akv-sec {
+  scroll-margin-top: 70px;
+}
+
+/* ============================================================
+   Interactive states — pseudo-classes React inline styles
+   can't express. Colors are all tokens.
+   ============================================================ */
+.akv-navlink {
+  transition: color 0.15s ease;
+}
+.akv-navlink:hover {
+  color: var(--accent);
+}
+.akv-navlink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.akv-toggle {
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.akv-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.akv-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Accent-filled pill/button: contact nav pill + primary CTAs */
+.akv-pill {
+  transition: background 0.15s ease;
+}
+.akv-pill:hover {
+  background: var(--accent2);
+}
+.akv-pill:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Outline button that gains accent border + text on hover */
+.akv-btn-outline {
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.akv-btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.akv-btn-outline:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Outline button that gains accent border only (résumé) */
+.akv-btn-outline-plain {
+  transition: border-color 0.15s ease;
+}
+.akv-btn-outline-plain:hover {
+  border-color: var(--accent);
+}
+.akv-btn-outline-plain:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Text link that turns accent on hover (project ↗ links, social rows) */
+.akv-link {
+  transition: color 0.15s ease;
+}
+.akv-link:hover {
+  color: var(--accent);
+}
+.akv-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Responsive — single breakpoint at 720px
+   ============================================================ */
+.akv-barcap {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .akv-sub {
+    display: none;
+  }
+  .akv-nav {
+    gap: 11px !important;
+    row-gap: 8px !important;
+  }
+  .akv-bartext {
+    display: none;
+  }
+  .akv-barcap {
+    display: flex !important;
+  }
+  .akv-pmain {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line2);
+  }
+  .akv-sec {
+    scroll-margin-top: 130px;
+  }
+}
