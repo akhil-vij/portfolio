@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Newsreader, Archivo, IBM_Plex_Mono } from "next/font/google";
+import { email, socials } from "@/lib/content";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -39,10 +40,40 @@ export const metadata: Metadata = {
     description,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Akhil Vij — Staff Engineer & Founder",
     description,
   },
+};
+
+// Structured data — helps search engines understand the "Akhil Vij" entity.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Akhil Vij",
+  url: siteUrl,
+  email: `mailto:${email}`,
+  telephone: "+91-9912752587",
+  jobTitle: "Staff Software Engineer & Founder",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Noida",
+    addressRegion: "Delhi NCR",
+    addressCountry: "IN",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "International Institute of Information Technology, Hyderabad (IIIT-H)",
+  },
+  knowsAbout: [
+    "Full-stack engineering",
+    "AI systems",
+    "LLM extraction",
+    "Agent orchestration",
+    "Design systems",
+    "Frontend architecture",
+  ],
+  sameAs: socials.map((s) => s.href),
 };
 
 export const viewport: Viewport = {
@@ -69,6 +100,10 @@ export default function RootLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </head>
       <body>{children}</body>
     </html>
